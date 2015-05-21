@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:orientation="vertical" >
+
+    <!-- 当前选择的模版 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/ip_editText"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:text="10.10.100.254" />
+
+        <EditText
+            android:id="@+id/port_editText"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/ip_editText"
+            android:layout_alignBottom="@+id/ip_editText"
+            android:layout_toRightOf="@+id/ip_editText"
+            android:ems="5"
+            android:inputType="phone"
+            android:text="8899" />
+
+        <Button
+            android:id="@+id/connectBtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/port_editText"
+            android:text="connect" />
+    </RelativeLayout>
+
+    <!-- 模版 -->
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        
+        android:layout_marginTop="16dp"
+        android:background="#aaaaaa" >
+
+        <TextView
+            android:id="@+id/rx_textView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重量："
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_zhongliang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="单价："
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_danjia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="金额："
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_jine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/tx_EditText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="send" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>
